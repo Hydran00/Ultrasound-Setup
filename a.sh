@@ -1,3 +1,3 @@
-source controller_ws/install/setup.bash
-source bota_ws/install/setup.bash
-source ur_ws/install/setup.bash
+source controller_ws/install/local_setup.zsh
+source bota_ws/install/local_setup.zsh
+source ur_ws/install/local_setup.zsh

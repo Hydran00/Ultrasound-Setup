@@ -1,3 +1,3 @@
-source controller_ws/install/local_setup.zsh
-source bota_ws/install/local_setup.zsh
-source ur_ws/install/local_setup.zsh
+source /home/nardi/ur3e-setup/controller_ws/install/setup.bash
+source /home/nardi/ur3e-setup/bota_ws/install/setup.bash
+source /home/nardi/ur3e-setup/ur_ws/install/setup.bash

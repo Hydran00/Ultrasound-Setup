@@ -10,13 +10,9 @@
 
 ## SOEM ROS Package Upgrade
 This package has been upgraded to the new Release of the **upstream SOEM repo v1.4.0**.
-This upgrade brings not only the new release, but also changes to the `catkin` plumbing.
+This upgrade brings not only the new release, but also uses `colcon` as build tool.
 This allows you to use `soem` from within your regular ROS workspace.
 So you don't need to specify `${soem_INCLUDE_DIRS}/soem` in the `include_directories` section of your package anymore.
-The changes to the build system are backwards compatible.
-
-If you experience problems with the new version, please try to revert to tag v1.3.0
-and test if this solves your issues.
 
 ## Package Description
 
@@ -27,30 +23,16 @@ SOEM has originally been hosted at http://developer.berlios.de/projects/soem/
 but has been moved to [GitHub and the OpenEtherCATsociety organisation](
 https://github.com/OpenEtherCATsociety/SOEM).
 
-This package contains the upstream SOEM repository as a git subtree and wraps it to be easily used within ROS.
+This package contains the upstream SOEM repository as a git submodule and wraps it to be easily used within ROS 2.
 
 **Disclaimer**:
-This package is not a development package for SOEM, but rather a wrapper to provide SOEM to ROS.
-In the end, this just provides the CMake quirks that allows releasing SOEM as a ROS package.
+This package is not a development package for SOEM, but rather a wrapper to provide SOEM to ROS 2.
+In the end, this just provides the CMake quirks that allows releasing SOEM as a ROS 2 package.
 
 All bug reports regarding the original SOEM source code should go to the bugtracker at
 https://github.com/OpenEtherCATsociety/SOEM/issues.
 
-All ROS related issues should target the [bug tracker on GitHub](https://github.com/mgruhler/soem/issues)
-(but might be redirected ;-)).
-
 Obviously, any support, being it bug reports or pull requests (obviously preferred) are highly welcome!
-
-## Installation
-
-If `soem` has been released for your respective ROS distribution, you can simply install it using
-
-```bash
-sudo apt install ros-<DISTRO>-soem
-```
-
-Currently, `soem` has been released for ROS `indigo`, `kinetic` and `melodic`.
-If you want to use `soem` from source, please check out the section about [Development](#Development).
 
 ## Usage
 
@@ -82,7 +64,7 @@ include_directories(
 SOEM requires access to certain network capabilities as it is using raw sockets, and as such any executable linking
 against SOEM needs to be run with certain privileges.
 Typically, you run any SOEM executables with `sudo` or as `root`.
-Tis is impractical for any ROS system, and as such there exists a tool called
+This is impractical for any ROS system, and as such there exists a tool called
 [`ethercat_grant`](https://github.com/shadow-robot/ethercat_grant) that helps with that.
 
 Install with
@@ -101,7 +83,16 @@ it is now possible to use the soem ROS package easily from your regular ROS work
 
 Simply clone this repository into your workspace
 ```bash
-git clone git@github.com:mgruhler/soem.git
+git clone https://github.com/cplasberg/soem.git
+```
+change into that repo
+```bash
+cd <foo/bar>/soem
+```
+and load the submodule
+```bash
+git submodule init
+git submodule update
 ```
 
 Note that if you want to update or patch the subtree which includes the SOEM upstream repository, you need to be sure
@@ -110,4 +101,3 @@ When creating this, I followed the instructions in
 [this Atlassian blog post](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree).
 This covers all the things you need.
 
-This package has been tested using both, `catkin_make` and `catkin build`.

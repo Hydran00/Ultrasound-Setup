@@ -10,14 +10,14 @@
     force_torque_filter/sinc_filter_size: 64
     force_torque_filter/chop_enable: false
     force_torque_filter/fir_disable: true
-    force_torque_filter/fast_enable: true
+    force_torque_filter/fast_enable: false
 
-    force_torque_offset/Fx: 0.0
-    force_torque_offset/Fy: 0.0
-    force_torque_offset/Fz: 0.0
-    force_torque_offset/Tx: 0.0
-    force_torque_offset/Ty: 0.0
-    force_torque_offset/Tz: 0.0
+    force_torque_offset/Fx: 13.96528117
+    force_torque_offset/Fy: 7.47243052
+    force_torque_offset/Fz: -5.48449086
+    force_torque_offset/Tx: 0.12904202
+    force_torque_offset/Ty: -0.22703354
+    force_torque_offset/Tz: -0.09480427
 
     sensor_configuration/calibration_matrix_active: true
     sensor_configuration/temperature_compensation_active: false

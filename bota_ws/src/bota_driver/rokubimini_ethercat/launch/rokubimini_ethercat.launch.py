@@ -22,13 +22,13 @@ def generate_launch_description():
             parameters=[
                 os.path.join(get_package_share_directory('rokubimini'), 'config', 'rokubimini_sensor.yaml'),
                 {
-                    'num_spinners': 2
+                    'num_spinners': 3
                 },
                 {
                     'time_step': 0.00125
                 },
                 {
-                    'ethercat_bus': 'enx803f5df173d1'
+                    'ethercat_bus': 'enp38s0'
                 },
                 {
                     'rokubiminis': ['ft_sensor0']  # ['ft_sensor0', 'ft_sensor1']
@@ -37,7 +37,7 @@ def generate_launch_description():
                     'rokubiminis/ft_sensor0/name': launch.substitutions.LaunchConfiguration('ft_sensor_a_name')
                 },
                 {
-                    'rokubiminis/ft_sensor0/product_name': 'BFT-SENS-ECAT-S-M8'
+                    'rokubiminis/ft_sensor0/product_name': 'BFT-SENS-ECAT-M8'
                 },
                 {
                     'rokubiminis/ft_sensor0/ethercat_address': 1

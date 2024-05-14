@@ -13,3 +13,18 @@
   ```
   sudo apt-get purge ros-humble-ur-description
   ```
+- Build F/T sensor drivers
+  ```
+  cd bota_ws
+  colcon build --symlink-install
+  ```
+- Build ur workspace
+  ```
+  cd ur_ws
+  colcon build --symlink-install
+  ```
+- Build controllers. Credits to [this](https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers) repo.
+  ```
+  cd controller_ws
+  colcon build --symlink-install
+  ```

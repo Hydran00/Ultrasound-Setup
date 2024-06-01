@@ -28,3 +28,17 @@
   cd controller_ws
   colcon build --symlink-install
   ```
+
+## Docker Image
+1. A docker image can be pulled from [here](https://hub.docker.com/repository/docker/hydran00/ultrasound-setup/general) with
+  ```
+  docker pull hydran00/ultrasound-setup
+  ```
+2. Run the image with
+  ```
+  docker run -it --rm -d -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  ultrasound-setup
+  ```
+3. Attach a terminal with
+  ```
+  docker exec -t -i container_name /bin/bash
+  ```

@@ -7,7 +7,7 @@
   ```
 - UR packages
   ```
-  sudo apt-get install ros-humble-ur*
+  sudo apt-get install ros-humble-ur-*
   ```
 - Uninstall `ur-description` so you can use the customized version of the `xacro` provided by this repo.
   ```

@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /RobotModel1/Description Topic1
         - /InteractiveMarkers1
-        - /InteractiveMarkers1/Status1
         - /TF1
         - /TF1/Frames1
         - /Pose1
@@ -279,6 +278,19 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /camera_pose
       Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /visualization_marker
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -332,18 +344,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.14199820160865784
-        Y: -0.5749805569648743
-        Z: 0.31030726432800293
+        X: -0.12066031247377396
+        Y: 0.0536506325006485
+        Z: 0.20404711365699768
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.31310534477233887
+      Pitch: 0.25310543179512024
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.221954822540283
+      Yaw: 1.0769546031951904
     Saved: ~
 Window Geometry:
   Displays:
@@ -359,5 +371,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1867
-  X: 494
-  Y: 174
+  X: 211
+  Y: 182

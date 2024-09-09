@@ -199,10 +199,12 @@ def launch_setup(context, *args, **kwargs):
             ('cartesian_motion_controller/target_frame', 'target_frame'),
             ('cartesian_compliance_controller/target_frame', 'target_frame'),
             ('cartesian_compliance_controller/target_wrench', 'target_wrench'),
-            ('cartesian_compliance_controller/ft_sensor_wrench', 'bus0/ft_sensor0/ft_sensor_readings/wrench'),
+            # ('cartesian_compliance_controller/ft_sensor_wrench', 'bus0/ft_sensor0/ft_sensor_readings/wrench'),
+            ('cartesian_compliance_controller/ft_sensor_wrench', '/force_torque_sensor_broadcaster/wrench'),
             ('cartesian_adaptive_compliance_controller/target_frame', 'target_frame'),
             ('cartesian_adaptive_compliance_controller/target_wrench', 'target_wrench'),
-            ('cartesian_adaptive_compliance_controller/ft_sensor_wrench', 'bus0/ft_sensor0/ft_sensor_readings/wrench'),
+            # ('cartesian_adaptive_compliance_controller/ft_sensor_wrench', 'bus0/ft_sensor0/ft_sensor_readings/wrench'),
+            ('cartesian_adaptive_compliance_controller/ft_sensor_wrench', '/force_torque_sensor_broadcaster/wrench'),
         ]
     )
 
@@ -396,7 +398,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "robot_ip", description="IP address by which the robot can be reached.",
-            default_value="192.168.100.102"
+            default_value="192.168.1.102"
         )
     )
     declared_arguments.append(

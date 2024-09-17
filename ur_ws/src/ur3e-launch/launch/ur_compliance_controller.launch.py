@@ -374,9 +374,9 @@ def launch_setup(context, *args, **kwargs):
         # initial_joint_controller_spawner_stopped,
         # initial_joint_controller_spawner_started,
         # motion_control_handle_spawner,
-        # cartesian_compliance_controller_spawner,
+        cartesian_compliance_controller_spawner,
         # cartesian_motion_controller_spawner,
-        cartesian_adaptive_compliance_controller_spawner,
+        # cartesian_adaptive_compliance_controller_spawner,
         # cartesian_force_controller_spawner,
         cartesian_motion_controller_spawner,
     ] + controller_spawners

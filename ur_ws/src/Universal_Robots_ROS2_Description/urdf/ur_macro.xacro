@@ -471,10 +471,15 @@
   <xacro:arg name="camera_model" default="zed2" />
   <xacro:arg name="custom_baseline" default="0.0" />
 
-  <joint name="camera_support_joint2" type="fixed">
+  <!-- <joint name="camera_support_joint2" type="fixed">
     <parent link="camera_support" />
     <child link="zed2_camera_link" />
     <origin xyz="-0.081653 0.018797 0.0" rpy="-${pi/2} 0.0 ${pi/2}" />
+  </joint> -->
+  <joint name="camera_support_joint2" type="fixed">
+    <parent link="camera_support" />
+    <child link="zed2_camera_link" />
+    <origin xyz="-0.081653 0.045 0.0" rpy="-${pi/2} 0.0 ${pi/2}" />
   </joint>
   
   <!-- If GNSS fusion is enabled the position of the antenna with respect to the camera mount point
@@ -514,12 +519,21 @@
   </joint>
 
   <link
-  name="probe">
+  name="probe_bota">
   </link>
   <joint name="probe_joint" type="fixed">
     <parent link="probe_mounting" />
-    <child link="probe" />
+    <child link="probe_bota" />
     <origin xyz="0.0 0.0 0.14" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <link
+  name="probe">
+  </link>
+  <joint name="ft_ur_joint" type="fixed">
+    <parent link="tool0" />
+    <child link="probe" />
+    <origin xyz="0.0 0.0 0.21" rpy="0.0 0.0 0.0" />
   </joint>
 
 

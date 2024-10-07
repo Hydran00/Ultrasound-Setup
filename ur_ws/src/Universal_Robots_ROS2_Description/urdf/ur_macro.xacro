@@ -476,11 +476,11 @@
     <child link="zed2_camera_link" />
     <origin xyz="-0.081653 0.018797 0.0" rpy="-${pi/2} 0.0 ${pi/2}" />
   </joint> -->
-  <joint name="camera_support_joint2" type="fixed">
+  <!-- <joint name="camera_support_joint2" type="fixed">
     <parent link="camera_support" />
     <child link="zed2_camera_link" />
     <origin xyz="-0.081653 0.045 0.0" rpy="-${pi/2} 0.0 ${pi/2}" />
-  </joint>
+  </joint> -->
   
   <!-- If GNSS fusion is enabled the position of the antenna with respect to the camera mount point
   is required -->
@@ -489,11 +489,11 @@
   <xacro:arg name="gnss_y" default="0.0" />
   <xacro:arg name="gnss_z" default="0.0" />
 
-  <xacro:include filename="$(find zed_wrapper)/urdf/zed_macro.urdf.xacro" />
+  <!-- <xacro:include filename="$(find zed_wrapper)/urdf/zed_macro.urdf.xacro" />
   <xacro:zed_camera name="$(arg camera_name)" model="$(arg camera_model)"
     custom_baseline="$(arg custom_baseline)" enable_gnss="$(arg enable_gnss)">
     <origin xyz="$(arg gnss_x) $(arg gnss_y) $(arg gnss_z)" rpy="0 0 0" />
-  </xacro:zed_camera>
+  </xacro:zed_camera> -->
 
   <!-- US probe model -->
   <link

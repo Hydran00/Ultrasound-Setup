@@ -9,10 +9,7 @@
   ```
   sudo apt-get install ros-humble-ur-*
   ```
-- Uninstall `ur-description` so you can use the customized version of the `xacro` provided by this repo.
-  ```
-  sudo apt-get purge ros-humble-ur-description
-  ```
+
 - Build F/T sensor drivers
   ```
   cd bota_ws

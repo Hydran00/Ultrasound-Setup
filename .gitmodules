@@ -1,3 +1,4 @@
-[submodule "controller_ws/src/cartesian_controllers"]
-	path = controller_ws/src/cartesian_controllers
-	url = git@github.com:fzi-forschungszentrum-informatik/cartesian_controllers.git
+[submodule "src"]
+	path = src
+	url = git@github.com:idra-lab/kuka_impedance.git
+	branch = main
